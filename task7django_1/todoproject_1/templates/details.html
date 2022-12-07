@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="banner">
+    <div class="banner-text">
+        <h1>ToDo Details</h1>
+    </div>
+</div>
+<div class="bg-light text-black">
+<div class="row">
+    <div class="col-sm-12">
+        <br>
+    </div>
+    <div class="col-sm-1">
+    </div>
+  <div class="col-sm-4">
+    <div class="card shadow text-bg-light mb-3">
+        <div class="card-body">
+                <p class="card-text">Task Key : {{taskdetail.id}}</p>
+                <p class="card-text">Task Identifier : {{taskdetail.taskname}}</p>
+                <p class="card-text">Task Priority : {{taskdetail.taskprio}}</p>
+                <p class="card-text">Alarm Set : {{taskdetail.taskalarm}}</p>
+                <p class="card-text">Alarm Time : {{taskdetail.tasktime}}</p>
+        </div>
+    </div>
+  </div>
+</div>
+</div>
+{% endblock %}

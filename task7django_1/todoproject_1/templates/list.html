@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="banner">
+    <div class="banner-text">
+        <h1>ToDo List</h1>
+    </div>
+</div>
+<div class="bg-light text-black">
+<div class="row">
+    <div class="col-sm-12">
+        <br>
+    </div>
+    <div class="col-sm-1">
+    </div>
+  <div class="col-sm-4">
+        {% for i in tasklist %}
+        <div class="card shadow text-bg-light mb-3">
+            <div class="card-header"><b></b></div>
+            <div class="card-body">
+                <p class="card-text">Task Key : {{i.id}}</p>
+                <p class="card-text">Task Identifier : {{i.taskname}}</p>
+<!--                <p class="card-text">Task Priority : {{i.taskprio}}</p>-->
+                <p class="card-text">Alarm Set : {{i.taskalarm}}</p>
+<!--                <p class="card-text">Alarm Time : {{i.tasktime}}</p>-->
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+</div>
+{% endblock %}
